@@ -11,7 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AreasWeCoverRouteImport } from './routes/areas-we-cover'
+import { Route as CompanyLetRouteImport } from './routes/company-let'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as GuaranteedRentRouteImport } from './routes/guaranteed-rent'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,40 +28,110 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AreasWeCoverRoute = AreasWeCoverRouteImport.update({
+  id: '/areas-we-cover',
+  path: '/areas-we-cover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyLetRoute = CompanyLetRouteImport.update({
+  id: '/company-let',
+  path: '/company-let',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuaranteedRentRoute = GuaranteedRentRouteImport.update({
+  id: '/guaranteed-rent',
+  path: '/guaranteed-rent',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
+  id: '/why-choose-us',
+  path: '/why-choose-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/company-let': typeof CompanyLetRoute
+  '/faqs': typeof FaqsRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
   '/services': typeof ServicesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/company-let': typeof CompanyLetRoute
+  '/faqs': typeof FaqsRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
   '/services': typeof ServicesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/company-let': typeof CompanyLetRoute
+  '/faqs': typeof FaqsRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
   '/services': typeof ServicesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/areas-we-cover'
+    | '/company-let'
+    | '/faqs'
+    | '/guaranteed-rent'
+    | '/services'
+    | '/why-choose-us'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/services'
-  id: '__root__' | '/' | '/about' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/areas-we-cover'
+    | '/company-let'
+    | '/faqs'
+    | '/guaranteed-rent'
+    | '/services'
+    | '/why-choose-us'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/areas-we-cover'
+    | '/company-let'
+    | '/faqs'
+    | '/guaranteed-rent'
+    | '/services'
+    | '/why-choose-us'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AreasWeCoverRoute: typeof AreasWeCoverRoute
+  CompanyLetRoute: typeof CompanyLetRoute
+  FaqsRoute: typeof FaqsRoute
+  GuaranteedRentRoute: typeof GuaranteedRentRoute
   ServicesRoute: typeof ServicesRoute
+  WhyChooseUsRoute: typeof WhyChooseUsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +150,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas-we-cover': {
+      id: '/areas-we-cover'
+      path: '/areas-we-cover'
+      fullPath: '/areas-we-cover'
+      preLoaderRoute: typeof AreasWeCoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-let': {
+      id: '/company-let'
+      path: '/company-let'
+      fullPath: '/company-let'
+      preLoaderRoute: typeof CompanyLetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guaranteed-rent': {
+      id: '/guaranteed-rent'
+      path: '/guaranteed-rent'
+      fullPath: '/guaranteed-rent'
+      preLoaderRoute: typeof GuaranteedRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-choose-us': {
+      id: '/why-choose-us'
+      path: '/why-choose-us'
+      fullPath: '/why-choose-us'
+      preLoaderRoute: typeof WhyChooseUsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -88,7 +198,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AreasWeCoverRoute: AreasWeCoverRoute,
+  CompanyLetRoute: CompanyLetRoute,
+  FaqsRoute: FaqsRoute,
+  GuaranteedRentRoute: GuaranteedRentRoute,
   ServicesRoute: ServicesRoute,
+  WhyChooseUsRoute: WhyChooseUsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
