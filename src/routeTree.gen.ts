@@ -14,9 +14,12 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AreasWeCoverRouteImport } from './routes/areas-we-cover'
 import { Route as CompanyLetRouteImport } from './routes/company-let'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as GuaranteedRentRouteImport } from './routes/guaranteed-rent'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
@@ -46,6 +49,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqsRoute = FaqsRouteImport.update({
   id: '/faqs',
   path: '/faqs',
@@ -56,9 +64,19 @@ const GuaranteedRentRoute = GuaranteedRentRouteImport.update({
   path: '/guaranteed-rent',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
@@ -83,9 +101,12 @@ export interface FileRoutesByFullPath {
   '/areas-we-cover': typeof AreasWeCoverRoute
   '/company-let': typeof CompanyLetRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/faqs': typeof FaqsRoute
   '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -96,9 +117,12 @@ export interface FileRoutesByTo {
   '/areas-we-cover': typeof AreasWeCoverRoute
   '/company-let': typeof CompanyLetRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/faqs': typeof FaqsRoute
   '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -110,9 +134,12 @@ export interface FileRoutesById {
   '/areas-we-cover': typeof AreasWeCoverRoute
   '/company-let': typeof CompanyLetRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/faqs': typeof FaqsRoute
   '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -125,9 +152,12 @@ export interface FileRouteTypes {
     | '/areas-we-cover'
     | '/company-let'
     | '/contact'
+    | '/cookies'
     | '/faqs'
     | '/guaranteed-rent'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/why-choose-us'
     | '/blog/$slug'
     | '/blog/'
@@ -138,9 +168,12 @@ export interface FileRouteTypes {
     | '/areas-we-cover'
     | '/company-let'
     | '/contact'
+    | '/cookies'
     | '/faqs'
     | '/guaranteed-rent'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/why-choose-us'
     | '/blog/$slug'
     | '/blog'
@@ -151,9 +184,12 @@ export interface FileRouteTypes {
     | '/areas-we-cover'
     | '/company-let'
     | '/contact'
+    | '/cookies'
     | '/faqs'
     | '/guaranteed-rent'
+    | '/privacy-policy'
     | '/services'
+    | '/terms'
     | '/why-choose-us'
     | '/blog/$slug'
     | '/blog/'
@@ -165,9 +201,12 @@ export interface RootRouteChildren {
   AreasWeCoverRoute: typeof AreasWeCoverRoute
   CompanyLetRoute: typeof CompanyLetRoute
   ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
   FaqsRoute: typeof FaqsRoute
   GuaranteedRentRoute: typeof GuaranteedRentRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
+  TermsRoute: typeof TermsRoute
   WhyChooseUsRoute: typeof WhyChooseUsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -210,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faqs': {
       id: '/faqs'
       path: '/faqs'
@@ -224,11 +270,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GuaranteedRentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/why-choose-us': {
@@ -261,9 +321,12 @@ const rootRouteChildren: RootRouteChildren = {
   AreasWeCoverRoute: AreasWeCoverRoute,
   CompanyLetRoute: CompanyLetRoute,
   ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
   FaqsRoute: FaqsRoute,
   GuaranteedRentRoute: GuaranteedRentRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
+  TermsRoute: TermsRoute,
   WhyChooseUsRoute: WhyChooseUsRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
