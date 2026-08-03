@@ -86,7 +86,7 @@ function BlogPostPage() {
           </Reveal>
 
           <Reveal delay={0.08} className="mt-10 space-y-5 border-t border-border pt-10">
-            {post.body.map((paragraph) => (
+            {post.body.map((paragraph: string) => (
               <p key={paragraph.slice(0, 40)} className="text-base leading-relaxed text-foreground">
                 {paragraph}
               </p>
