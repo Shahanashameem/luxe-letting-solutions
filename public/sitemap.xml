@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: prefix each <loc> with the project URL once a domain is set. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/about</loc><priority>0.7</priority></url>
+  <url><loc>/services</loc><priority>0.9</priority></url>
+  <url><loc>/guaranteed-rent</loc><priority>0.9</priority></url>
+  <url><loc>/company-let</loc><priority>0.9</priority></url>
+  <url><loc>/why-choose-us</loc><priority>0.7</priority></url>
+  <url><loc>/areas-we-cover</loc><priority>0.7</priority></url>
+  <url><loc>/faqs</loc><priority>0.6</priority></url>
+  <url><loc>/blog</loc><priority>0.6</priority></url>
+  <url><loc>/blog/guaranteed-rent-vs-traditional-letting</loc><priority>0.5</priority></url>
+  <url><loc>/blog/what-landlords-should-check-in-a-company-let</loc><priority>0.5</priority></url>
+  <url><loc>/blog/preparing-a-property-for-corporate-occupancy</loc><priority>0.5</priority></url>
+  <url><loc>/contact</loc><priority>0.9</priority></url>
+  <url><loc>/privacy-policy</loc><priority>0.3</priority></url>
+  <url><loc>/terms</loc><priority>0.3</priority></url>
+  <url><loc>/cookies</loc><priority>0.3</priority></url>
+</urlset>

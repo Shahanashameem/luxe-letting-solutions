@@ -1,24 +1,57 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/sections/Hero";
+import { Benefits } from "@/components/sections/Benefits";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { AreasCovered } from "@/components/sections/AreasCovered";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { AssessmentSection } from "@/components/sections/AssessmentSection";
+import { homeFaqs } from "@/content/site";
+import { pageMeta } from "@/lib/seo";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "STAYEST — Guaranteed Rent & Company Let for UK Landlords";
+const description =
+  "Guaranteed monthly rent, professional property management and long-term company let agreements for UK landlords, agents and investors.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: pageMeta({ title, description, path: "/" }),
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: homeFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <>
+      <Hero />
+      <Benefits />
+      <ServicesGrid />
+      <WhyChooseUs />
+      <HowItWorks />
+      <AreasCovered />
+      <Testimonials />
+      <FaqSection
+        items={homeFaqs}
+        intro="The questions landlords ask most often before instructing us."
       />
-    </div>
+      <AssessmentSection />
+    </>
   );
 }
