@@ -43,14 +43,14 @@ export function Navbar() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
         <Logo withTagline={false} />
 
-        <nav aria-label="Primary" className="hidden items-center gap-6 xl:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-5 xl:flex">
           {links.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
               activeProps={{ className: "text-navy after:scale-x-100" }}
-              className="relative text-sm font-medium text-muted-foreground transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:text-navy hover:after:scale-x-100"
+              className="relative text-[0.8125rem] font-medium whitespace-nowrap text-muted-foreground transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:text-navy hover:after:scale-x-100"
             >
               {item.label}
             </Link>
@@ -60,7 +60,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${company.phone.replace(/\s/g, "")}`}
-            className="hidden items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-navy lg:flex"
+            className="hidden items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-navy 2xl:flex"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {company.phone}
