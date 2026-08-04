@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
-import heroImage from "@/assets/hero-apartment.jpg";
+import heroImage from "@/assets/hero-uk-houses.jpg";
 import { ActionLink } from "@/components/brand/ActionButton";
 
 /** Home page hero. The image is the LCP element, so it is eagerly loaded. */
@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Living room of a premium modern London apartment with city skyline views"
+          alt="Street of traditional UK residential brick houses at golden hour"
           width={1600}
           height={1200}
           fetchPriority="high"

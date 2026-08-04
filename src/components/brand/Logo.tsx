@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
+import logoImage from "@/assets/stayest-logo.png";
 
 /**
- * STAYEST wordmark. Deliberately typographic — no house or roof iconography.
- * `variant` switches the palette for light and dark (navy) backgrounds.
+ * STAYEST logo lockup built around the brand script mark.
+ * `variant` switches the tagline palette for light and dark (navy) backgrounds.
  */
 export function Logo({
   variant = "dark",
@@ -22,31 +23,20 @@ export function Logo({
       aria-label={`${"STAYEST"} — Premium Company Let and Property Management, go to home page`}
       className={cn("group inline-flex flex-col leading-none", className)}
     >
-      <span className="flex items-center gap-2.5">
-        <span
-          aria-hidden="true"
-          className={cn(
-            "grid h-8 w-8 shrink-0 place-items-center rounded-md border font-display text-sm font-semibold tracking-tight transition-colors",
-            isLight
-              ? "border-gold/50 bg-gold/15 text-gold"
-              : "border-navy/15 bg-navy text-navy-foreground",
-          )}
-        >
-          S
-        </span>
-        <span
-          className={cn(
-            "font-display text-[1.35rem] font-semibold tracking-[0.22em]",
-            isLight ? "text-navy-foreground" : "text-navy",
-          )}
-        >
-          STAYEST
-        </span>
-      </span>
+      <img
+        src={logoImage}
+        alt="STAYEST"
+        width={896}
+        height={657}
+        className={cn(
+          "h-11 w-auto object-contain transition-opacity group-hover:opacity-90 sm:h-12",
+          !isLight && "[filter:brightness(0.55)_saturate(0)_contrast(1.15)]",
+        )}
+      />
       {withTagline && (
         <span
           className={cn(
-            "mt-1.5 hidden pl-[2.6rem] text-[0.62rem] font-medium tracking-[0.14em] uppercase sm:block",
+            "mt-1 hidden text-[0.62rem] font-medium tracking-[0.14em] uppercase sm:block",
             isLight ? "text-navy-foreground/60" : "text-muted-foreground",
           )}
         >
@@ -56,3 +46,4 @@ export function Logo({
     </Link>
   );
 }
+
