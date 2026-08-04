@@ -41,7 +41,7 @@ export function Navbar() {
         Skip to content
       </a>
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
-        <Logo withTagline={false} />
+        <Logo mode="mark" showWordmark />
 
         <nav aria-label="Primary" className="hidden items-center gap-5 xl:flex">
           {links.map((item) => (
@@ -80,7 +80,7 @@ export function Navbar() {
               <SheetTitle className="sr-only">Site navigation</SheetTitle>
               <div className="flex h-full flex-col">
                 <div className="border-b border-border px-6 py-5">
-                  <Logo />
+                  <Logo mode="full" />
                 </div>
                 <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-3 py-4">
                   {navigation.map((item) => (
