@@ -21,7 +21,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Logo variant="light" />
+            <Logo variant="light" mode="full" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-foreground/70">
               Guaranteed rent and fully managed company let solutions for landlords,
               agents and investors across the United Kingdom.
