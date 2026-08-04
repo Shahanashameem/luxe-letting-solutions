@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Living room of a premium modern London apartment with city skyline views"
+          alt="Street of traditional UK residential brick houses at golden hour"
           width={1600}
           height={1200}
           fetchPriority="high"
