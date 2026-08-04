@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
-import heroImage from "@/assets/hero-apartment.jpg";
+import heroImage from "@/assets/hero-uk-houses.jpg";
 import { ActionLink } from "@/components/brand/ActionButton";
 
 /** Home page hero. The image is the LCP element, so it is eagerly loaded. */
