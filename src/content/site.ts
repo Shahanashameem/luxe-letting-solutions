@@ -228,12 +228,6 @@ export const steps = [
   },
 ];
 
-export const stats = [
-  { value: 250, suffix: "+", label: "Properties under management" },
-  { value: 98, suffix: "%", label: "Landlord contract renewal rate" },
-  { value: 12, suffix: " yrs", label: "Combined sector experience" },
-  { value: 0, suffix: "", label: "Void days charged to landlords", prefix: "" },
-];
 
 export const areas = [
   {

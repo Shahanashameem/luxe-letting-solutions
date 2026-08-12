@@ -5,7 +5,6 @@ import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { AreasCovered } from "@/components/sections/AreasCovered";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { homeFaqs } from "@/content/site";
@@ -46,7 +45,6 @@ function Index() {
       <WhyChooseUs />
       <HowItWorks />
       <AreasCovered />
-      <Testimonials />
       <FaqSection
         items={homeFaqs}
         intro="The questions landlords ask most often before instructing us."
