@@ -114,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           telephone: company.phone,
           email: company.email,
           areaServed: "United Kingdom",
-          address: { "@type": "PostalAddress", addressCountry: "GB" },
+          address: { "@type": "PostalAddress", ...company.postalAddress },
           sameAs: [company.linkedin, company.facebook, company.instagram],
         }),
       },
