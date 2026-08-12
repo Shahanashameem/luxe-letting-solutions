@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { company } from "@/content/site";
 
 function NotFoundComponent() {
@@ -113,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           telephone: company.phone,
           email: company.email,
           areaServed: "United Kingdom",
-          address: { "@type": "PostalAddress", addressCountry: "GB" },
+          address: { "@type": "PostalAddress", ...company.postalAddress },
           sameAs: [company.linkedin, company.facebook, company.instagram],
         }),
       },
@@ -151,6 +152,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <WhatsAppButton />
         {/* Reserved slot: live chat / AI assistant widget mounts here later. */}
       </div>
     </QueryClientProvider>

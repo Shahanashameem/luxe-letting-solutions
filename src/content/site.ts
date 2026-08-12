@@ -7,9 +7,17 @@
 export const company = {
   name: "STAYEST",
   tagline: "Premium Company Let & Property Management",
-  phone: "+44 20 3000 0000",
-  email: "landlords@stayest.co.uk",
-  address: "Registered office address to be confirmed, London, United Kingdom",
+  phone: "+44 7384 040875",
+  email: "stayestltd@gmail.com",
+  address: "82 Strathmore Avenue, Luton, UK",
+  postalAddress: {
+    streetAddress: "82 Strathmore Avenue",
+    addressLocality: "Luton",
+    addressCountry: "GB",
+  },
+  whatsapp: "+447384040875",
+  whatsappMessage:
+    "Hello STAYEST, I'm interested in your company let and property management services.",
   linkedin: "https://www.linkedin.com/",
   facebook: "https://www.facebook.com/",
   instagram: "https://www.instagram.com/",
