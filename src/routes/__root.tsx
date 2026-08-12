@@ -152,6 +152,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <WhatsAppButton />
         {/* Reserved slot: live chat / AI assistant widget mounts here later. */}
       </div>
     </QueryClientProvider>
