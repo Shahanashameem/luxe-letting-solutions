@@ -228,12 +228,6 @@ export const steps = [
   },
 ];
 
-export const stats = [
-  { value: 250, suffix: "+", label: "Properties under management" },
-  { value: 98, suffix: "%", label: "Landlord contract renewal rate" },
-  { value: 12, suffix: " yrs", label: "Combined sector experience" },
-  { value: 0, suffix: "", label: "Void days charged to landlords", prefix: "" },
-];
 
 export const areas = [
   {
@@ -261,26 +255,6 @@ export const areas = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "We moved four flats across to STAYEST after two years of inconsistent tenancies. The rent has landed on the same date every single month since.",
-    name: "R. Whitfield",
-    role: "Private landlord, East London",
-  },
-  {
-    quote:
-      "As an agent I need a partner who answers the phone and documents everything. Their inspection reports are better than most managing agents I work with.",
-    name: "S. Iqbal",
-    role: "Letting agent, Birmingham",
-  },
-  {
-    quote:
-      "The proposal was clear, the agreement was clear, and there were no deductions hidden in the small print. That is rarer than it should be.",
-    name: "D. Marchetti",
-    role: "Property investor, Manchester",
-  },
-];
 
 export type Faq = { question: string; answer: string; group: string };
 

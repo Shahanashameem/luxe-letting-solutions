@@ -1,8 +1,6 @@
 import { Check } from "lucide-react";
 import meetingImage from "@/assets/business-meeting.jpg";
 import { Reveal } from "@/components/brand/Reveal";
-import { StatCounter } from "@/components/brand/StatCounter";
-import { stats } from "@/content/site";
 
 const reasons = [
   "Contracts written in plain English, with the responsibility split stated clearly",
@@ -13,7 +11,7 @@ const reasons = [
   "Experience across single units, portfolios and new-build developments",
 ];
 
-/** Why Choose Us with animated statistics — reused on home and its own page. */
+/** Why Choose Us section — reused on home and its own page. */
 export function WhyChooseUs() {
   return (
     <section
@@ -43,17 +41,6 @@ export function WhyChooseUs() {
               </li>
             ))}
           </ul>
-
-          <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-navy-foreground/15 pt-10 sm:grid-cols-4">
-            {stats.map((stat) => (
-              <StatCounter
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
-            ))}
-          </dl>
         </Reveal>
 
         <Reveal direction="right" delay={0.1}>

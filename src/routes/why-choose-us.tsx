@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/sections/PageHero";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Benefits } from "@/components/sections/Benefits";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { CallToAction } from "@/components/sections/CallToAction";
 import { pageMeta } from "@/lib/seo";
 
@@ -29,7 +28,6 @@ function WhyChooseUsPage() {
       />
       <WhyChooseUs />
       <Benefits />
-      <Testimonials />
       <CallToAction title="See how we would handle your property" />
     </>
   );
