@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+
 import { company } from "@/content/site";
 import { cn } from "@/lib/utils";
 
