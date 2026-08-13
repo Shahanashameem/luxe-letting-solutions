@@ -8,7 +8,7 @@ export function WhatsAppButton() {
   const number = company.whatsapp.replace(/\D/g, "");
   const href = `https://api.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(company.whatsappMessage)}`;
 
-  const openChat = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const openChat = (event: MouseEvent<HTMLAnchorElement>) => {
     // The Lovable preview runs in an iframe where plain target="_blank" links can be
     // blocked, so open the chat explicitly at the top level.
     event.preventDefault();
