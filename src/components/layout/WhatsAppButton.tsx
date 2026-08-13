@@ -16,6 +16,7 @@ export function WhatsAppButton() {
   return (
     <a
       href={href}
+      onClick={openChat}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with STAYEST on WhatsApp"
