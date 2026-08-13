@@ -1,14 +1,24 @@
+import type { MouseEvent } from "react";
+
 import { company } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 /** Floating WhatsApp action button available on every page. */
 export function WhatsAppButton() {
   const number = company.whatsapp.replace(/\D/g, "");
-  const href = `https://wa.me/${number}?text=${encodeURIComponent(company.whatsappMessage)}`;
+  const href = `https://api.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(company.whatsappMessage)}`;
+
+  const openChat = (event: MouseEvent<HTMLAnchorElement>) => {
+    // The Lovable preview runs in an iframe where plain target="_blank" links can be
+    // blocked, so open the chat explicitly at the top level.
+    event.preventDefault();
+    window.open(href, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <a
       href={href}
+      onClick={openChat}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with STAYEST on WhatsApp"
