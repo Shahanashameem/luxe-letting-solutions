@@ -17,7 +17,7 @@ export const company = {
   },
   whatsapp: "+447384040875",
   whatsappMessage:
-    "Hello STAYEST, I'm interested in your company let and property management services.",
+    "Hello STAYEST, I would like to enquire about a property. Property address: \nBedrooms: \nMy name: ",
   linkedin: "https://www.linkedin.com/",
   facebook: "https://www.facebook.com/",
   instagram: "https://www.instagram.com/",
@@ -31,12 +31,99 @@ export const navigation: NavItem[] = [
   { label: "Services", to: "/services" },
   { label: "Guaranteed Rent", to: "/guaranteed-rent" },
   { label: "Company Let", to: "/company-let" },
+  { label: "Properties", to: "/properties" },
   { label: "Why Choose Us", to: "/why-choose-us" },
   { label: "Areas We Cover", to: "/areas-we-cover" },
   { label: "FAQs", to: "/faqs" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ];
+
+/** Links shown inline in the desktop header. */
+export const primaryNavigation: NavItem[] = [
+  { label: "Home", to: "/" },
+  { label: "Services", to: "/services" },
+  { label: "Guaranteed Rent", to: "/guaranteed-rent" },
+  { label: "Company Let", to: "/company-let" },
+  { label: "Properties", to: "/properties" },
+];
+
+/** Remaining links, collapsed into the header "More" menu on desktop. */
+export const secondaryNavigation: NavItem[] = [
+  { label: "About", to: "/about" },
+  { label: "Why Choose Us", to: "/why-choose-us" },
+  { label: "Areas We Cover", to: "/areas-we-cover" },
+  { label: "FAQs", to: "/faqs" },
+  { label: "Blog", to: "/blog" },
+];
+
+export type Property = {
+  slug: string;
+  title: string;
+  location: string;
+  type: string;
+  bedrooms: number;
+  bathrooms: number;
+  status: "Available" | "Under Offer" | "Let & Managed";
+  rentGuide: string;
+  term: string;
+  image: "apartment" | "building" | "houses";
+  summary: string;
+  features: string[];
+};
+
+/**
+ * Example listings. Replace these with real instructions as the portfolio
+ * grows — the page reads straight from this array.
+ */
+export const properties: Property[] = [
+  {
+    slug: "luton-town-centre-apartment",
+    title: "Two-Bedroom Serviced Apartment",
+    location: "Luton Town Centre, Bedfordshire",
+    type: "Apartment",
+    bedrooms: 2,
+    bathrooms: 2,
+    status: "Available",
+    rentGuide: "£1,450 pcm guaranteed",
+    term: "3-year company let",
+    image: "apartment",
+    summary:
+      "A modern town-centre apartment held on a guaranteed rent agreement and occupied by vetted relocating professionals.",
+    features: ["Fully furnished", "Allocated parking", "Weekly housekeeping", "Corporate occupancy"],
+  },
+  {
+    slug: "milton-keynes-family-house",
+    title: "Three-Bedroom Family House",
+    location: "Milton Keynes, Buckinghamshire",
+    type: "House",
+    bedrooms: 3,
+    bathrooms: 2,
+    status: "Under Offer",
+    rentGuide: "£1,850 pcm guaranteed",
+    term: "5-year company let",
+    image: "houses",
+    summary:
+      "A well-presented family home let to a corporate partner for long-stay contractor accommodation, fully managed end to end.",
+    features: ["Private garden", "Driveway", "Quarterly inspections", "Compliance handled"],
+  },
+  {
+    slug: "watford-professional-block",
+    title: "Studio Suites — Professional Block",
+    location: "Watford, Hertfordshire",
+    type: "Studio suites",
+    bedrooms: 1,
+    bathrooms: 1,
+    status: "Let & Managed",
+    rentGuide: "£1,100 pcm guaranteed",
+    term: "2-year company let",
+    image: "building",
+    summary:
+      "A block of studio suites managed on behalf of an investor landlord, with rent paid on the same date every month.",
+    features: ["Block management", "24/7 reporting line", "Insured contractors", "Named account manager"],
+  },
+];
+
 
 export const benefits = [
   {
